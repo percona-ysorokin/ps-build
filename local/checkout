@@ -14,6 +14,7 @@ if [ ! -d "${ROOT_DIR}" ]; then
 fi
 
 pushd $ROOT_DIR
+    sudo chown -R ${USER} .
     git reset --hard
     git clean -xdf
 
