@@ -141,7 +141,7 @@ pipeline {
                     fi
                     rm -f ${WORKSPACE}/VERSION-${BUILD_NUMBER}
                 '''
-                git branch: 'PS-6892-test-junit', url: 'https://github.com/oleksandr-kachan/ps-build'
+                git branch: 'PS-6892-5.6-test_junit', url: 'https://github.com/percona-ysorokin/ps-build'
                 sh '''
                     git reset --hard
                     git clean -xdf
@@ -197,7 +197,7 @@ pipeline {
             options { retry(3) }
             agent { label LABEL }
             steps {
-                git branch: 'PS-6892-test-junit', url: 'https://github.com/oleksandr-kachan/ps-build'
+                git branch: 'PS-6892-5.6-test_junit', url: 'https://github.com/percona-ysorokin/ps-build'
                 sh '''
                     git reset --hard
                     git clean -xdf
